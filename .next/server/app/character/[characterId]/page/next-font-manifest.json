@@ -1,0 +1,10 @@
+{
+  "pages": {},
+  "app": {
+    "[project]/app/character/[characterId]/page": [
+      "static/media/FeVQS0BTqb0h60ACH55Q2J5hm24-s.p.b6616b12.woff2"
+    ]
+  },
+  "appUsingSizeAdjust": true,
+  "pagesUsingSizeAdjust": false
+}

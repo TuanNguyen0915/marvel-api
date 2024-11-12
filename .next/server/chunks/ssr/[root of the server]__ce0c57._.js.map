@@ -1,0 +1,11 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 87, "column": 0}, "map": {"version":3,"sources":["file:///Users/tuannguyen/code/sei/projects/re-work/marvel-api/lib/api.ts"],"sourcesContent":["\"use server\"\nimport axios from \"axios\"\n\nexport const getCharacterByBane = async (name: string) => {\n  const res = await axios.get(\n    `https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=${name}&apikey=${process.env.NEXT_PUBLIC_MARVEL_PUBLIC_KEY}`\n  )\n  return res\n}\n"],"names":[],"mappings":";;;;;;AACA;;;;AAEO,MAAM,qBAAqB,OAAO;IACvC,MAAM,MAAM,MAAM,qIAAA,CAAA,UAAK,CAAC,GAAG,CACzB,CAAC,mEAAmE,EAAE,KAAK,QAAQ,wEAA6C;IAElI,OAAO;AACT;;;IALa;;AAAA,+OAAA"}},
+    {"offset": {"line": 106, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
+    {"offset": {"line": 112, "column": 0}, "map": {"version":3,"sources":["file:///Users/tuannguyen/code/sei/projects/re-work/marvel-api/app/search/page.tsx"],"sourcesContent":["import { getCharacterByBane } from '@/lib/api'\nimport React from 'react'\n\nconst SearchPage = async ({ searchParams }: { searchParams: Promise<{ query: string }> }) => {\n  const query = (await searchParams).query\n  // console.log(apiKey)\n  if (!query) return null\n  const characterData = await getCharacterByBane(query)\n  console.log(characterData)\n  return (\n    <div>\n      <h1 className='text-center text-7xl text-red-500'>{query} test here</h1>\n    </div>\n  )\n}\n\nexport default SearchPage\n"],"names":[],"mappings":";;;;AAAA;;;AAGA,MAAM,aAAa,OAAO,EAAE,YAAY,EAAgD;IACtF,MAAM,QAAQ,CAAC,MAAM,YAAY,EAAE,KAAK;IACxC,sBAAsB;IACtB,IAAI,CAAC,OAAO,OAAO;IACnB,MAAM,gBAAgB,MAAM,CAAA,GAAA,0GAAA,CAAA,qBAAkB,AAAD,EAAE;IAC/C,QAAQ,GAAG,CAAC;IACZ,qBACE,8OAAC;kBACC,cAAA,8OAAC;YAAG,WAAU;;gBAAqC;gBAAM;;;;;;;;;;;;AAG/D;uCAEe"}},
+    {"offset": {"line": 144, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
+    {"offset": {"line": 156, "column": 0}, "map": {"version":3,"sources":["file:///Users/tuannguyen/code/sei/projects/re-work/marvel-api/.next-internal/server/app/search/page/actions.js"],"sourcesContent":["export {getCharacterByBane as '7f6824d81a6c775ee1105da89092bf661d45c5afa7'} from 'ACTIONS_MODULE0'\n"],"names":[],"mappings":";;;AAAA"}},
+    {"offset": {"line": 161, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}
