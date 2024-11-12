@@ -48,7 +48,7 @@ const Comic = ({
           <Loader />
         ) : (
           <div className="grid w-full grid-cols-3 gap-4 max-md:gap-2 md:grid-cols-4 lg:grid-cols-5">
-            {comics.map((comic: any) => {
+            {comics.map((comic) => {
               const thumbnailUrl =
                 comic.thumbnail.path + "." + comic.thumbnail.extension
               const link = ""

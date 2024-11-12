@@ -27,7 +27,7 @@ const SearchPage = async ({
         {charactersData.length === 1 ? "result" : "results"})
       </h1>
       <div className="mt-20 grid w-full grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {charactersData.map((character: any) => {
+        {charactersData.map((character: ICharacter) => {
           const thumbnailUrl =
             character.thumbnail.path + "." + character.thumbnail.extension
           const link = `/character/${character.id}`
