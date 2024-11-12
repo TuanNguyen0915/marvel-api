@@ -1,19 +1,6 @@
 {
-  "app": {
-    "[project]/app/page": [
-      "static/media/FeVQS0BTqb0h60ACH55Q2J5hm24-s.p.b6616b12.woff2"
-    ],
-    "[project]/app/search/page": [
-      "static/media/FeVQS0BTqb0h60ACH55Q2J5hm24-s.p.b6616b12.woff2"
-    ],
-    "[project]/app/character/[characterId]/page": [
-      "static/media/FeVQS0BTqb0h60ACH55Q2J5hm24-s.p.b6616b12.woff2"
-    ],
-    "[project]/app/_not-found/page": [
-      "static/media/FeVQS0BTqb0h60ACH55Q2J5hm24-s.p.b6616b12.woff2"
-    ]
-  },
-  "appUsingSizeAdjust": true,
+  "app": {},
+  "appUsingSizeAdjust": false,
   "pages": {},
   "pagesUsingSizeAdjust": false
 }

@@ -18,7 +18,7 @@ const SearchPage = async ({
 }) => {
   const query = (await searchParams).query
   if (!query) return null
-  const charactersData = await getCharacterByBane(query)
+  const charactersData = await getCharacterByBane(query) as ICharacter[]
   return (
     <div>
       <h1 className="text-center text-4xl text-red-500">
@@ -27,7 +27,7 @@ const SearchPage = async ({
         {charactersData.length === 1 ? "result" : "results"})
       </h1>
       <div className="mt-20 grid w-full grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {charactersData.map((character: ICharacter) => {
+        {charactersData.map((character) => {
           const thumbnailUrl =
             character.thumbnail.path + "." + character.thumbnail.extension
           const link = `/character/${character.id}`
